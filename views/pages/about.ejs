@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include("../partials/head") %>
+  </head>
+  <body>
+    <header><%- include("../partials/nav") %></header>
+    <main class="container">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="jumbotron">
+            <h1>Family Guy Summary</h1>
+            <p><%= description %></p>
+
+            <ul>
+                <% familyGuy.forEach(function(member) { %>
+                  <li>
+                    <strong><%= member.name %></strong>
+                    member <%= member.familyMember %>
+                  </li>
+                <% }); %>
+              </ul>
+
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <h3>Sidebar</h3>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer><%- include("../partials/footer") %></footer>
+  </body>
+</html>
